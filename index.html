@@ -2,29 +2,40 @@
 <head>
   <link
     rel="stylesheet"
-    href="./styles/animate.min.css"
+    href="./styles/style.css"
   />
   <link
     rel="stylesheet"
-    href="./styles/style.css"
+    href="./styles/animate.min.css"
   />
-
+ <script src="jquery-3.5.1.min.js"></script>
+ <script src="jquery.csv.js"></script>
+ <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
-<body>
+<body class="center">
+
 <SCRIPT LANGUAGE="JAVASCRIPT">
-var r_text = new Array ();
+var r_text;
+d3.csv("quotes.csv").then(function(data) {
+  r_text = $.csv.toArray(csv_in);
+});
+
+/*var r_text = new Array ();
 r_text[0] = "Win Win Lose";
 r_text[1] = "TTL";
 r_text[2] = "אפשר להירגע, הכל מה שנקרא צ'יל אנד פיפ";
 r_text[3] = "נפילה הידראולית";
 r_text[4] = "אתה מחוץ לפלוגה Out of the Box";
 
+$.get("quotes.csv", function(csv_in)
+r_text = $.csv.toArray(csv_in);
+*/
 var i = Math.floor(r_text.length * Math.random());
 
 document.body.appendChild(document.createElement('p'));
-document.body.classList.add('animate__animate', 'animate__bounce');
 document.querySelector("body p:last-child").id = "jstext";
 document.querySelector("#jstext").innerHTML = r_text[i];
+document.getElementById("jstext").classList.add('quotes', 'animate__animate', 'animate__bouncein');
 </script>
 </body>
     <style type="text/css">
