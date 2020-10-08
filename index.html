@@ -1,35 +1,32 @@
+<html dir="rtl" lang="he">
 <head>
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    href="./styles/animate.min.css"
   />
-    <meta charset="utf-8">
-<SCRIPT LANGUAGE="JAVASCRIPT">
-<!--
-</head>
+  <link
+    rel="stylesheet"
+    href="./styles/style.css"
+  />
 
-<h1 class="animate__animated animate__bounce">
+</head>
+<body>
+<SCRIPT LANGUAGE="JAVASCRIPT">
 var r_text = new Array ();
 r_text[0] = "Win Win Lose";
 r_text[1] = "TTL";
-r_text[2] = "ΧΧ¤Χ©Χ¨ ΧΧ”Χ™Χ¨Χ’ΧΆ, Χ”Χ›Χ ΧΧ” Χ©Χ Χ§Χ¨Χ Χ¦'Χ™Χ ΧΧ Χ“ Χ¤Χ™Χ¤";
-r_text[3] = "Χ Χ¤Χ™ΧΧ” Χ”Χ™Χ“Χ¨ΧΧ•ΧΧ™Χª";
-r_text[4] = "ΧΧªΧ” ΧΧ—Χ•Χ¥ ΧΧ¤ΧΧ•Χ’Χ” Out of the Box";
+r_text[2] = "ΰτωψ μδιψβς, δλμ ξδ ωπχψΰ φ'ιμ ΰπγ τιτ";
+r_text[3] = "πτιμδ διγψΰεμιϊ";
+r_text[4] = "ΰϊδ ξηευ μτμεβδ Out of the Box";
 
 var i = Math.floor(r_text.length * Math.random());
-document.write("<br /><br /><br /><br /><br /><br /><br /><center><FONT SIZE=72><FONT COLOR='#FFFFFF'>" +
-r_text[i]  + "</FONT></center><br />");
-var bgcolorlist=new Array("#228B22", "#FFD700", "#ADFF2F", "#FF69B4", "#CD5C5C", "#4B0082", "#7CFC00", "#ADD8E6", "#E84643", "#ED0A07", "#EA2907", "#E5294B", "#E00D26", "#FF3030", "#FC7500", "#F95700", "#F43900", "#F95620")
 
-document.body.style.background=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)];
-
-</script><br> <br>
-    <br>
-    <br>
+document.body.appendChild(document.createElement('p'));
+document.body.classList.add('animate__animate', 'animate__bounce');
+document.querySelector("body p:last-child").id = "jstext";
+document.querySelector("#jstext").innerHTML = r_text[i];
+</script>
+</body>
     <style type="text/css">
 <!--
-body,td,th {
-     color: #000;
-     font-family: Helvetica, sans-serif;
-</h1>
 </html>

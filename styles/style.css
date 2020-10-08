@@ -1,0 +1,33 @@
+/* Text CSS */
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round Regular'), local('VarelaRound-Regular'),
+       url('../fonts/varela-round-v13-latin_hebrew-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/varela-round-v13-latin_hebrew-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+#jstext {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Varela Round';
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+*/horizontal & vertical centering 
+#jstext {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+#jstext {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
