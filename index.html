@@ -15,6 +15,7 @@
 <body class="center">
 
 <SCRIPT LANGUAGE="JAVASCRIPT">
+var r_text = new Array ();
 $.get( "quotes.csv", function( CSVdata) {
 r_text = $.csv.toArray(CSVdata);
 });
