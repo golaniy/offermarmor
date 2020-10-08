@@ -15,17 +15,15 @@
 <body class="center">
 
 <SCRIPT LANGUAGE="JAVASCRIPT">
-var r_text;
-d3.csv("quotes.csv").then(function(csv_in) {
-  r_text = $.csv.toArray(csv_in);
+$.get( "quotes.csv", function( CSVdata) {
+r_text = $.csv.toArray(CSVdata);
 });
-
 /*var r_text = new Array ();
 r_text[0] = "Win Win Lose";
 r_text[1] = "TTL";
-r_text[2] = "àôùø ìäéøâò, äëì îä ùð÷øà ö'éì àðã ôéô";
-r_text[3] = "ðôéìä äéãøàåìéú";
-r_text[4] = "àúä îçåõ ìôìåâä Out of the Box";
+r_text[2] = "אפשר להירגע, הכל מה שנקרא צ'יל אנד פיפ";
+r_text[3] = "נפילה הידראולית";
+r_text[4] = "אתה מחוץ לפלוגה Out of the Box";
 
 $.get("quotes.csv", function(csv_in)
 r_text = $.csv.toArray(csv_in);
