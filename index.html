@@ -1,147 +1,72 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html dir="rtl">
+<html lang="zxx" dir="rtl">
+
 <head>
-  <title>Quote</title>
+  <meta charset="utf-8">
+  <title>Quotes</title>
+
+  
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Stylesheets -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style type="text/css">
-    html, body {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color: white;
-  background-image: url('https://cdn.pixabay.com/photo/2019/06/04/07/46/lilac-4250869_960_720.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: -992;
-
-}
-
-
-span {
-  border-radius: 100px;
-  opacity: 0.75;
-  filter: alpha(opacity=75); /* For IE8 and earlier */
-}
- p {
-  max-width: 30em;
-  color: black;
-  font-family: 'Varela Round';
-  letter-spacing:0.1em;
-  text-align:center;
-  margin: 40px auto;
-  text-transform: lowercase;
-  line-height: 145%;
-  font-size: 2em;
-  font-variant: small-caps;
-}
-h1,h2,h3,h4,h5,h6,p, text{
-  font-family: 'Varela Round';
-}
-p :hover {
-  text-decoration: none;
-}
-
-.container {
-  padding-top: 6em;
-  text-align: center;
-}
-
-
-
-#b-nav ul {
-  margin: 0;
-  padding: 0.5em;
-  list-style-type: none;
-  text-align: center;
-}
-
-#b-nav ul li {
-  display: inline;
-}
-
-#b-nav ul li a {
-  text-decoration: none;
-  padding: .2em 1em;
-  background-color: black;
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
-}
-
-.hold {
-  width: 100%;
-  text-align: left;
-}
-
-#gen {
-  outline: none;
-  padding-top: 5px;
-  text-decoration: none;
-  opacity: 0.6;
-  background-color: black;
-  color: white;
-  border: thin solid white;
-  height: 40px;
-  width: 100px;
-  border-radius: 2px;
-  transition: 0.5s;
-  padding-bottom: 5px;
-  margin-bottom: 100px;
-}
-
-#gen:hover {
-  background-color: white;
-  color: black;
-  border: thin solid black;
-  opacity: 0.8;
-}
-
-#gen a {
-  text-decoration: none;
-}
-
-
-@media screen 
- and (max-device-width: 800px) 
-  and (max-device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
-  and (orientation: portrait) {
-    p {
-      font-size: 1em;
-    }
-}
-
-
-  </style>
-  
-</head>
-<body onload="genQuote()">
-
-    <div class="container">
-      <div id="date"></div>
-      <div id="display">
-        <h1 style="font-size: 34px; color: white; ">עפר שהוא חיה</h1>
-      </div>
-      <div id="content">
-        <p id="quote" style="display: none;background-color: white;padding: 50px;"></p>
-        <h4 style="font-size: 20px;color: white; ">באהבה גולני</h4>
-      </div>
-    </div>
-    <div id="b-nav">
-      <ul>
-        <button id="gen" onclick="genQuote()"><i class="fa fa-refresh"></i> New Quote </button>
-        
-      </ul>
-    </div>
+<style type="text/css">
     
+p,h1,h2,h3,h4,h5,h6,p, text,button{
+  font-family: 'Varela Round';
+}
+</style>
+</head>
+
+<body onload="genQuote()">
+   
+
+
+<!-- testimonial -->
+<section class="section pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-title section-title-border" style="font-size: -webkit-xxx-large;"> עפר שהוא חיה  </h1>
+            </div>
+            <div class="col-lg-12 col-md-12 align-self-center pl-0 text-center">
+                <div class="testimonial-slider p-5">
+                    <!-- slider item -->
+                    <div class="outline-0">
+                        
+                        <p class="text-dark" id="quote" style="display: none;text-align: center;">Lorem ipsum dolor sit amet constur adipisicing elit sed eiusmtempor incid sed dolore magna aliqu enim minim veniam quis nostrud exercittion ullamco labo ris nisi aliquip excepteur.</p>
+                        
+                    </div>
+                </div>
+                <h4 style="font-size: 20px;padding-top: 60px;">באהבה גולני</h4>
+                 <button id="gen" onclick="genQuote()" style="margin-top: 30px;"  class="btn btn-primary"><i class="fa fa-refresh"></i> New Quote </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /testimonial --> 
+
 <script type="text/javascript">
  
 
 function genQuote() {
-  var randNum = Math.floor(Math.random() * 8) + 1;
+  var randNum = Math.floor(Math.random() * 91) + 1;
   document.getElementById('quote').innerHTML = quotes[randNum];
   document.getElementById('quote').style.display = "none";
  $("#quote").fadeIn();
@@ -243,17 +168,7 @@ var quotes = [
 "מה היית לוקח איתך לאי בודד? אחי דבק דו״צ  ",
 "Be strong Be happy ותתחילו  ",
 ];
-
-//date
-function startDate() {
-  var d = new Date();
-  var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-  document.getElementById("date").innerHTML = days[d.getDay()]+" | "+[d.getMonth()+1]+"/"+d.getDate()+"/"+d.getFullYear();
-}
-
-
-
-
 </script>
+
 </body>
 </html>
