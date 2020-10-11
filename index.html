@@ -45,17 +45,18 @@ p,h1,h2,h3,h4,h5,h6,p, text,button{
             <div class="col-lg-12 text-center">
                 <h1 class="section-title section-title-border" style="font-size: -webkit-xxx-large;"> עפר שהוא חיה  </h1>
             </div>
-            <div class="col-lg-12 col-md-12 align-self-center pl-0 text-center">
+            <div class="col-lg-12 col-md-12 align-self-center pl-0 text-center" style="padding-right: 0px;">
+                <button id="gen" onclick="genQuote()" style="margin-top: 0px;margin-bottom: 25px;"  class="btn btn-primary"><i class="fa fa-refresh"></i> New Quote </button>
                 <div class="testimonial-slider p-5">
                     <!-- slider item -->
                     <div class="outline-0">
                         
-                        <p class="text-dark" id="quote" style="display: none;text-align: center;">Lorem ipsum dolor sit amet constur adipisicing elit sed eiusmtempor incid sed dolore magna aliqu enim minim veniam quis nostrud exercittion ullamco labo ris nisi aliquip excepteur.</p>
+                        <p class="text-dark" id="quote" style="display: none;text-align: center;line-height: 1;"></p>
                         
                     </div>
                 </div>
                 <h4 style="font-size: 20px;padding-top: 60px;">באהבה גולני</h4>
-                 <button id="gen" onclick="genQuote()" style="margin-top: 30px;"  class="btn btn-primary"><i class="fa fa-refresh"></i> New Quote </button>
+                 
             </div>
         </div>
     </div>
@@ -66,7 +67,7 @@ p,h1,h2,h3,h4,h5,h6,p, text,button{
  
 
 function genQuote() {
-  var randNum = Math.floor(Math.random() * 91) + 1;
+  var randNum = Math.floor(Math.random() * 143) + 1;
   document.getElementById('quote').innerHTML = quotes[randNum];
   document.getElementById('quote').style.display = "none";
  $("#quote").fadeIn();
@@ -167,6 +168,58 @@ var quotes = [
 "סוויץ׳ אנד מייק  ",
 "מה היית לוקח איתך לאי בודד? אחי דבק דו״צ  ",
 "Be strong Be happy ותתחילו  ",
+"בסוף אני המפקד שלהם   ",
+"יכול להיות שבוסטר עף, נפל על ענן  ",
+"יש לו סלידה קונפליקטית  ",
+"אם אכנס מפל \"ג 2 אני יוצא לVacation  ",
+"הוא לא עושה ריסטרט הוא עושה פירמוט  ",
+"זה הבעיה ביחידה הזאת - חותמים על מסמכים ולא קוראים  ",
+"באתי לעשות 10-0 יצא לי 5-1  ",
+"הגעתי הביתה - תוך רבע שעה כבר גמרתי  ",
+"מבושל ואפוי זה אותו דבר - זה פשוט לא באותו הכלי  ",
+"הוא בא אליי ואני לא מבין איזה גנון פתחתי, ג-2 או ד-1000  ",
+"ראיתי את הפרק הראשון ישר עברתי לגמר - אמרתי מזל שלא נכנסתי לאירוע הזה  ",
+"היא לא תדפוק ת'נועם שלו. לא אצלי במשמרת.  ",
+"יש לה תחת מתרחב  ",
+"זה אבירי הכביש האלה?  ",
+"אתה גר ביבנה, הוא גר בגן יבנה, מה ההבדל זה הכל צפון עזה לא?  ",
+"אני רוצה שירגישו מה זה תחבורה ציבורית  ",
+"היה טעים והיה כמות אבל לא היה Unique  ",
+"ההוא דודו ההוא פארוק ההוא תשובה  ",
+"יש שתי סוגים של ערביות - ערביות שמנות וערביות דקיקות  ",
+"הייתה ריצה טובה - כאילו אני לא רצתי, אבל הייתה ריצה טובה  ",
+"זה מובי מייקר Extra Chill Pro  ",
+"אני אוהב לדבר עברית - אתה יודע, כמו שצריך  ",
+"יש לי משקפת - נהייתי רציני  ",
+"קוראים לי דינה - הדין שלה  ",
+"אני מכין שקשוקה מעולה אז הם מאוד נהנו  ",
+"כשנגיע לגשר נשבור אותו  ",
+"זה Win Win Lose - יותר ניצחתי מאשר הפסדתי ועדיין הפסדתי  ",
+"אתה יודע איך זה אלישע... ברח לי המשפט  ",
+"הוא מעשן אחי - קשיחות  ",
+"מה זה 17 יום? זה 20 יום שלא אוכלים בו?  ",
+"אני לא קוטף שקדים כל היום - אני מאונן אחי!  ",
+"גם אני הייתי עם שחר בשבטה - היה לי כיף מאוד  ",
+"תגיד לו אחי פה זה לא קזינו  ",
+"יש זין ויש זין בעין  ",
+"שאתה אוכל עוגה אתה רוצה להשאיר אותה שלמה  ",
+"זין סטוק  ",
+"אתה עפר - תלך לשחייה  ",
+"שאלו אותי אם להביא אבוקדו לא בשל - אמרתי להם תביאו, שיתבשל  ",
+"הוא חכם אבל הוא דביל  ",
+"יש לך Highball או Lowball? יש לי Ballball  ",
+"זה היה כמו לקחת ג'לי על קיר  ",
+"אנחנו באים פלוגה ב' - לא בחשק ולא בכושר  ",
+"הוא בקטע שהוא מחפש את עצמו וגם אני מחפש אותו - אז אני אמצא  ",
+"היא רצה מהר אז היא תהיה מדא \"ג נע \"ת ? אני מזיין מהר אז אני אהיה זיין  ",
+"אני עובד בשיטה של שלם ושכח  ",
+"לימונים אחי לא עושים איתם לימונדה - יש תרכיז  ",
+"עושים שם סחר בענבים Taste of Like  ",
+"יש בלופים ויש תכל \"ס  ",
+
+"הוא כמוני - כותב דברים סתם להראות שהוא עסוק  ",
+"יעני צינור בקבוק  ",
+"הוא סמרטוט ואז הוא הופך ת'מגב  ",
 ];
 </script>
 
