@@ -11,7 +11,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!-- Stylesheets -->
   <link href="css/style.css" rel="stylesheet">
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -26,6 +29,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style type="text/css">
     
 p,h1,h2,h3,h4,h5,h6,p, text,button{
@@ -56,7 +60,21 @@ p,h1,h2,h3,h4,h5,h6,p, text,button{
                     </div>
                 </div>
                 <h4 style="font-size: 20px;padding-top: 60px;">באהבה, גולני</h4>
-                 
+                <button id="formBtn" onclick="openForm()" style="margin-top: 0px;margin-bottom: 25px;" class="btn btn-primary"> רוצה לתרום עוד? <i class="he he-refresh"></i></button> 
+				<!--<div id="suggestionForm" class="form">
+					<div class="form-content animate__animated animate__jackInTheBox">
+						<div class="form-header">
+							<span class="close">&times;</span>
+							<h2>תעזרו לנו לעזור לעֹפר!</h2>
+						</div>
+						<div class="form-body">
+							<h4 style="font-size: 20px"> יש לכם ציטוט חדש? עזרו לנו וכתבו אותו כאן! </h4>
+						<div class="form-footer">
+							<h3>Modal Footer</h3>
+						</div>
+					</div>
+				-->
+				</div>
             </div>
         </div>
     </div>
@@ -67,7 +85,7 @@ p,h1,h2,h3,h4,h5,h6,p, text,button{
  
 
 function genQuote() {
-  var randNum = Math.floor(Math.random() * 143) + 1;
+  var randNum = Math.floor(Math.random() * 142) + 1;
   document.getElementById('quote').innerHTML = quotes[randNum];
   document.getElementById('quote').style.display = "none";
  $("#quote").fadeIn();
@@ -219,7 +237,25 @@ var quotes = [
 "יעני צינור בקבוק",
 "הוא סמרטוט ואז הוא הופך ת'מגב",
 ];
-</script>
 
+var form = document.getElementById("suggestionForm");
+var formBtn = document.getElementById("rozeLitromBtn");
+var span = document.getElementsByClassName("close")[0];
+
+function openForm() {
+  form.style.display = "block";
+ }
+ 
+span.onclick = function() {
+  form.style.display = "none";
+}
+ 
+window.onclick = function(event) {
+  if (event.target == form) {
+    form.style.display = "none";
+  }
+ }
+
+</script>
 </body>
 </html>
